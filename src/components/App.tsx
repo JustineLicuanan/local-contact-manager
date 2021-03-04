@@ -1,12 +1,13 @@
-import { Typography } from '@material-ui/core';
+import { ContactCtxProvider } from '../context/ContactCtx';
+import Contacts from './Contacts';
+import Copyright from './Copyright';
 
 const App = () => {
 	return (
-		<>
-			<Typography variant='h4' align='center'>
-				Hello World
-			</Typography>
-		</>
+		<ContactCtxProvider>
+			<Contacts />
+			<Copyright />
+		</ContactCtxProvider>
 	);
 };
 
