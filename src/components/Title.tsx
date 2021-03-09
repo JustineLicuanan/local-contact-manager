@@ -1,16 +1,13 @@
 import { Box, Typography } from '@material-ui/core';
 
-const Contacts = () => {
+const Title = () => {
 	return (
-		<Box pb={6}>
+		<Box py={6}>
 			<Typography variant='h4' align='center'>
-				Contacts
-				<br />
-				<br />
-				Work in Progress (WiP)
+				Contact Manager
 			</Typography>
 		</Box>
 	);
 };
 
-export default Contacts;
+export default Title;

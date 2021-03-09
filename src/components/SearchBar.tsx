@@ -27,7 +27,7 @@ const SearchBar = () => {
 	const classes = useStyles();
 
 	return (
-		<Box py={6} display='flex' justifyContent='center'>
+		<Box pb={6} display='flex' justifyContent='center'>
 			<Paper component='form' className={classes.root}>
 				<InputBase
 					className={classes.input}
