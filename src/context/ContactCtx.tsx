@@ -1,8 +1,8 @@
 import { createContext, ReactNode, useState } from 'react';
 
-import { getLocalArrayData } from '../lib/getLocalArrayData';
+// import { getLocalArrayData } from '../lib/getLocalArrayData';
 
-interface Contact {
+export interface Contact {
 	id: string;
 	name: string;
 	email: string;
@@ -19,11 +19,31 @@ interface Props {
 	children: ReactNode;
 }
 
-const ContactCtx = createContext<IContactCtx | undefined>(undefined);
+const ContactCtx = createContext<IContactCtx>({} as IContactCtx);
 
 export const ContactCtxProvider = ({ children }: Props) => {
 	const [contacts, setContacts] = useState<Contact[]>(
-		getLocalArrayData('contacts')
+		// getLocalArrayData('contacts')
+		[
+			{
+				id: '1',
+				name: 'John Doe',
+				email: 'john.doe@gmail.com',
+				number: '09223456789',
+			},
+			{
+				id: '2',
+				name: 'Coco Loco',
+				email: 'coco.loco@gmail.com',
+				number: '09223456780',
+			},
+			{
+				id: '3',
+				name: 'Bob Smith',
+				email: 'bob.smith@gmail.com',
+				number: '09223456781',
+			},
+		]
 	);
 
 	const value: IContactCtx = {
